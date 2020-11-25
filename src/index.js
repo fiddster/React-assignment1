@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Navigationbar } from './components/navigationbar/Navigationbar'
+import { Footer } from './components/footer/Footer'
 
 ReactDOM.render(
 	<React.StrictMode>
+		<Navigationbar />
 		<App />
+		<Footer />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
