@@ -13,7 +13,23 @@ img{
 	grid-template-columns: 30% 40% 30%;
 	place-items: center;
 	grid-template-areas: '. content .';
+}
 
+.container-50-50{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	place-items: center;
+	grid-template-areas: 'left right';
+	padding: 0 1rem;
+}
+
+.title{
+	font-family: 'LeagueSpartan';
+	font-size: 12rem;
+	background: linear-gradient(to right, #5b00ff, #ff6400);
+	background-clip: text;
+	-webkit-background-clip: text;  
+  	-webkit-text-fill-color: transparent;
 }
 
 .display-box {
@@ -21,6 +37,7 @@ img{
 	color: ghostwhite;
 	border-radius: .25rem;
 	padding: 1rem;
+	margin: 0.5rem;
 }
 
 a {

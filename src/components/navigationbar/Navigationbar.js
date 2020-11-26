@@ -1,12 +1,22 @@
 import React from 'react'
 import './navigationbar.scss'
+import RoutingPaths from '../../routes/RoutingPaths.json'
+import { NavAccount } from '../navaccount/NavAccount'
 
 export const Navigationbar = () => {
 	return (
 		<nav>
-			<span className="display-box">
-				<a href="/">Home</a>
-			</span>
+			<div className="flex-row nav-left">
+				<span className="display-box">
+					<a href={RoutingPaths.HOMEVIEW_PATH}>Home</a>
+				</span>
+				<span className="display-box">
+					<a href={RoutingPaths.ABOUT_US_PATH}>About us</a>
+				</span>
+			</div>
+
+			<NavAccount />
+
 		</nav>
 	)
 }

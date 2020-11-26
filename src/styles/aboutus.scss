@@ -1,0 +1,19 @@
+.content-left{
+	grid-area: left;
+}
+
+.content-right{
+	grid-area: right;
+}
+
+.big-list{
+height: 90%;
+width: 90%;
+margin: 0.5rem;
+}
+
+.big-list-item{
+	list-style: none;
+	font-size: 2rem;
+	padding: 0.5rem;
+}

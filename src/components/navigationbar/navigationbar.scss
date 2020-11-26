@@ -2,7 +2,12 @@ nav{
 	background-image: linear-gradient(to right, #5b00ff, #9600ef, #bb00df, #d600d1, #ea00c4, #f500b0, #fb009d, #ff008b, #ff0e6e, #ff2e51, #ff4b32, #ff6400);
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: space-between;
 	align-content: center;
 	padding: 1rem;
+}
+
+.flex-row{
+	display: flex;
+	flex-direction: row;
 }

@@ -14,3 +14,8 @@ code {
 	grid-template-rows: auto 1fr auto;
 	background-color: black;
 }
+
+@font-face {
+	font-family: 'LeagueSpartan';
+	src: local('LeagueSpartan'), url(../shared/media/fonts/LeagueSpartan-Bold.otf) format('opentype');
+}
