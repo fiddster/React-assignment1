@@ -19,14 +19,15 @@ form{
 	
 }
 
-button{
+.signup-btn{
 	justify-self: end;
 	background: rgba($color: #000000, $alpha: 1.0);
-	color: ghostwhite;
 	border: 1px solid ghostwhite;
+	color: ghostwhite;
+	font-size: 2rem;
 	border-radius: 0.25rem;
 	padding: 0.5rem;
-	font-size: 2rem;
+	margin-top: 1.5rem;
 	&:hover{
 		cursor: pointer;
 	}

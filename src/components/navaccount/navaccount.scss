@@ -1,0 +1,14 @@
+.nav-login-btn{
+	border: none;
+	text-decoration: underline;
+	font-size: 1rem;
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+.nav-login-form{
+	font-size: 1rem;
+	place-items: center;
+	border: 1px solid ghostwhite;
+}

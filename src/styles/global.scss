@@ -6,6 +6,7 @@ img{
 
 .content-container{
 	min-height: 90vh;
+	padding-bottom: 1rem;
 }
 
 .container-30-40-30{
@@ -32,7 +33,18 @@ img{
   	-webkit-text-fill-color: transparent;
 }
 
+.sub-title{
+	font-family: 'LeagueSpartan';
+	font-size: 4rem;
+	background: linear-gradient(to right, #5b00ff, #ff6400);
+	background-clip: text;
+	-webkit-background-clip: text;  
+  	-webkit-text-fill-color: transparent;
+}
+
 .display-box {
+	display: flex;
+	place-items: center;
 	background-color: rgba(0, 0, 0, 0.2);
 	color: ghostwhite;
 	border-radius: .25rem;

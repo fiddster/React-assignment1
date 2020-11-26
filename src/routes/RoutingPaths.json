@@ -1,5 +1,6 @@
 {
 	"HOMEVIEW_PATH": "/",
 	"ABOUT_US_PATH": "/about",
-	"SIGN_UP_PATH": "/signup"
+	"SIGN_UP_PATH": "/signup",
+	"MYACCOUNT_PATH": "/my-account"
 }

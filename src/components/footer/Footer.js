@@ -5,11 +5,11 @@ export const Footer = () => {
 	return (
 		<footer>
 			<span className="display-box">
-				{'Images: '}
+				{'Images:'}
 				<a href="https://unsplash.com/">Unsplashed</a>
 			</span>
 			<span className="display-box">
-				{'Made By: '}
+				{'Made By:'}
 				<a href="https://github.com/fiddster">Fredrik Andersson</a>
 			</span>
 		</footer>

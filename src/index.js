@@ -6,12 +6,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Navigationbar } from './components/navigationbar/Navigationbar'
 import { Footer } from './components/footer/Footer'
+import { UserProvider } from './shared/providers/UserProvider';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Navigationbar />
-		<App />
-		<Footer />
+		<UserProvider>
+			<Navigationbar />
+			<App />
+			<Footer />
+		</UserProvider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
