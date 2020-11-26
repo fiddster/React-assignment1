@@ -1,0 +1,11 @@
+.home-image-container{
+	display: grid;
+	grid-template-columns: auto 40% auto;
+	grid-template-areas: '. content .';
+	place-items: center;
+}
+
+.welcome-image{
+	padding: 1rem;
+	grid-area: content;
+}

@@ -3,8 +3,10 @@ import './navigationbar.scss'
 
 export const Navigationbar = () => {
 	return (
-		<header>
-			Testing Navbar
-		</header>
+		<nav>
+			<span className="display-box">
+				<a href="/">Home</a>
+			</span>
+		</nav>
 	)
 }
