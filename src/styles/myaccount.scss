@@ -1,0 +1,51 @@
+.container-account-settings{
+	display: grid;
+	grid-template-columns: minmax(150px, 25%) 1fr;
+}
+
+.account-sidebar{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 80vh;
+	margin: 0 0.25rem;
+}
+
+.account-sidebar-top, .account-sidebar-bottom{
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+}
+
+.account-options-btn{
+	background: none;
+	border: 1px solid ghostwhite;
+	color: ghostwhite;
+	font-size: 1.5rem;
+	min-width: 50%;
+	margin: 0.25rem 0;
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+.account-content{
+	display: grid;
+	place-items: center;
+	min-height: 80vh;
+	margin: 0 0.25rem;
+	color: ghostwhite;
+	font-size: 1.5rem;
+	border: 1px solid ghostwhite;
+	background-image: url(../shared/media/images/dummydata.jpg);
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container */
+	p{
+		padding: 2rem;
+		font-size: 2rem;
+		background: rgba($color: #000000, $alpha: .6);
+		border-radius: .5rem;
+	}
+}

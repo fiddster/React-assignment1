@@ -1,0 +1,34 @@
+form{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	font-size: 2rem;
+	*{
+		color: ghostwhite;
+	}
+	input{
+		max-width: 50%;
+		margin: 0.5rem;
+		color: black;
+	}
+	label{
+		justify-self: end;
+		max-width: 50%;
+		margin: 0.5rem;
+	}
+	
+}
+
+.signup-btn{
+	justify-self: end;
+	background: rgba($color: #000000, $alpha: 1.0);
+	border: 1px solid ghostwhite;
+	color: ghostwhite;
+	font-size: 2rem;
+	border-radius: 0.25rem;
+	padding: 0.5rem;
+	margin-top: 1.5rem;
+	&:hover{
+		cursor: pointer;
+	}
+}
