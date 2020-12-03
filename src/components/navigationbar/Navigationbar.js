@@ -11,6 +11,9 @@ export const Navigationbar = () => {
 					<a href={RoutingPaths.HOMEVIEW_PATH}>Home</a>
 				</span>
 				<span className="display-box">
+					<a href={RoutingPaths.WHOSTHATPOKEMON_PATH}>Whos that Pokemon?!</a>
+				</span>
+				<span className="display-box">
 					<a href={RoutingPaths.ABOUT_US_PATH}>About us</a>
 				</span>
 			</div>
