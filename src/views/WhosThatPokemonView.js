@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+import { generateRandomArray } from '../shared/utils/randomArray'
+
 import '../styles/whosthatpokemon.scss'
 
 export const WhosThatPokemonView = () => {
@@ -9,30 +11,7 @@ export const WhosThatPokemonView = () => {
 	const [isLoading, setIsLoading] = useState(true)
 	const [first, setFirst] = useState(true)
 
-	const initRandomArray = () => {
-		let array = []
-		for (let i = 0; i < MAX_ID; i++) {
-			array.push(i)
-		}
-
-		var j = array.length,
-			k = 0,
-			temp;
-
-		while (j--) {
-			k = Math.floor(Math.random() * (j + 1));
-
-			// swap randomly chosen element with current element
-			temp = array[j];
-			array[j] = array[k];
-			array[k] = temp;
-		}
-
-		return array
-	}
-
-	let initialArray = initRandomArray()
-	const [pokemonIds,] = useState(initialArray)
+	const [pokemonIds,] = useState(generateRandomArray(MAX_ID))
 	const [index, setIndex] = useState(1)
 
 	const [pokemon, setPokemon] = useState()
@@ -42,34 +21,13 @@ export const WhosThatPokemonView = () => {
 	const [haveGuessed, setHaveGuessed] = useState(false)
 	const [correct, setCorrect] = useState()
 
-	const fetchPokemonById = async (id) => {
+	const nextPokemon = () => {
 		setIsLoading(true)
-		try {
-			await fetch(POKE_URL + id)
-				.then(res => res.json())
-				.then((result) => {
-					setPokemon(result)
-				})
-			setIsLoading(false)
-
-		} catch (ex) {
-			console.log(ex)
-			setIsLoading(false)
-		}
-	}
-
-	const nextPokemon = (i) => {
-		fetchPokemonById(pokemonIds[i])
-	}
-
-	const nextButton = async () => {
-		var temp = index
-
+		setPokemon()
 		setGuess('')
 		setHaveGuessed(false)
-
-		setIndex(1 + index)
-		nextPokemon(++temp)
+		setIndex(index + 1)
+		//No end condition when MAX_ID <= index will lead to error
 	}
 
 	const submitGuess = (e) => {
@@ -87,22 +45,34 @@ export const WhosThatPokemonView = () => {
 	useEffect(() => {
 
 		if (first) {
-			nextPokemon(index);
 			setFirst(false)
+			console.log('first')
 		}
 
+		fetch(POKE_URL + pokemonIds[index])
+			.then(response => response.json())
+			.then((pokemon) => {
+				setPokemon(pokemon)
+				setIsLoading(false)
+			})
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [index, pokemonIds])
+
+	useEffect(() => {
 		return () => {
-			alert('thank you for playing!')
+			alert('Thanks for playing :)')
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [first])
+	}, [])
 
 	return (
 		<div className="content-container">
 			<div className="container-30-40-30">
 				<div className="content">
+					<span ></span>
 					<>{
-						isLoading ?
+						(isLoading || pokemon === undefined) ?
 							<span className="sub-title">Searching for pokemons</span>
 							:
 							<div className="pokemon-box">
@@ -123,8 +93,8 @@ export const WhosThatPokemonView = () => {
 									<span className="border-light"> Your Guess: <input type="text" onChange={(e) => setGuess(e.target.value)} /></span>
 									<button className="btn" type="submit">Guess!</button>
 								</form>
-								<button className="btn" onClick={() => nextButton()}>Next!</button>
-								{/*<button className="btn">Next!</button>*/}
+								<button className="btn" onClick={() => nextPokemon()}>Next!</button>
+
 							</div>
 					}</>
 				</div>
