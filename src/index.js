@@ -4,16 +4,14 @@ import './styles/index.css';
 import './styles/global.scss'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Navigationbar } from './components/navigationbar/Navigationbar'
-import { Footer } from './components/footer/Footer'
 import { UserProvider } from './shared/providers/UserProvider';
 
 ReactDOM.render(
 	<React.StrictMode>
 		<UserProvider>
-			<Navigationbar />
+
 			<App />
-			<Footer />
+
 		</UserProvider>
 	</React.StrictMode>,
 	document.getElementById('root')
