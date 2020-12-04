@@ -9,9 +9,7 @@ import { UserProvider } from './shared/providers/UserProvider';
 ReactDOM.render(
 	<React.StrictMode>
 		<UserProvider>
-
 			<App />
-
 		</UserProvider>
 	</React.StrictMode>,
 	document.getElementById('root')

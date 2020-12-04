@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react'
+import { NavLink } from 'react-router-dom'
 import { UserContext } from '../../shared/providers/UserProvider'
 import RoutingPaths from '../../routes/RoutingPaths.json'
 import './navaccount.scss'
@@ -33,14 +34,14 @@ export const NavAccount = () => {
 				authenticatedUser ?
 					<div className="flex-row">
 						<span className="display-box">
-							<a href={'/my-account'}>My account</a>
+							<NavLink to={RoutingPaths.MYACCOUNT_PATH}>My account</NavLink>
 						</span>
 						<button className="nav-login-btn display-box" onClick={(e) => logout(e)}>Logout</button>
 					</div>
 					:
 					<div className="flex-row">
 						<span className="display-box">
-							<a href={RoutingPaths.SIGN_UP_PATH}>Sign up</a>
+							<NavLink to={RoutingPaths.SIGN_UP_PATH}>Sign up</NavLink>
 						</span>
 						<>{
 							showLoginForm ?
