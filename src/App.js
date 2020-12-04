@@ -1,9 +1,12 @@
-
-import './App.css';
+import React from 'react'
+import { Routes } from './routes/Routes'
+import './styles/App.css';
 
 function App() {
 	return (
-		<div></div>
+		<Routes>
+
+		</Routes>
 	);
 }
 
